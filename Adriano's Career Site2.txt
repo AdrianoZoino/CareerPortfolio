@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adriano Zoino</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #e6f0ff;
+      margin: 0;
+      padding: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .profile {
+      width: 200px;
+      border-radius: 50%;
+      margin-top: 20px;
+      border: 3px solid #0077cc;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    p {
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+    }
+    table {
+      margin: 30px auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 800px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #cce0ff;
+      color: #003366;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .badge-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px auto;
+    }
+    .badge-gallery img {
+      width: 100px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#certifications">Certifications</a> |
+    <a href="#plan">August Plan</a> |
+    <a href="#badges">Badges</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <img src="_R67_2039.jpg" alt="Adriano Zoino" class="profile">
+  <h1>Adriano Zoino</h1>
+  <p><strong>Senior Systems Programming Analyst</strong> at UPS via NTT DATA. Managing <strong>150,000+ Apple/Android endpoints</strong> across airline, healthcare, and field ops. Passionate about compliance, vendor coordination, and operational continuity.</p>
+
+  <p><a href="Adriano_Zoino_Resume.pdf" target="_blank">📄 View My Resume</a></p>
+
+  <h2 id="certifications">✅ Completed Certifications</h2>
+  <table>
+    <tr>
+      <th>Certification</th>
+      <th>Exam</th>
+      <th>Skills Covered</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>AI Fundamentals</td>
+      <td>AI-900</td>
+      <td>Azure AI services, responsible AI, MDM use cases</td>
+      <td>✅ Completed</td>
+    </tr>
+    <tr>
+      <td>Endpoint Administrator Associate</td>
+      <td>MD-102</td>
+      <td>Intune, Azure Entra ID, compliance policies, app deployment</td>
+      <td>✅ Completed</td>
+    </tr>
+  </table>
+
+  <h2 id="plan">📅 August Certification Plan</h2>
+  <table>
+    <tr>
+      <th>Order</th>
+      <th>Certification</th>
+      <th>Exam Name</th>
+      <th>Skills Covered</th>
+      <th>Difficulty</th>
+      <th>Study Materials</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>AI Fundamentals</td>
+      <td>AI-900</td>
+      <td>Azure AI services, responsible AI, MDM use cases</td>
+      <td>⭐☆☆☆☆</td>
+      <td><a href="https://learn.microsoft.com/en-us/certifications/ai-fundamentals/">Official Page</a> | <a href="https://learn.microsoft.com/en-us/training/paths/azure-ai-fundamentals/">Learn Path</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Endpoint Administrator Associate</td>
+      <td>MD-102</td>
+      <td>Intune, Azure Entra ID, compliance policies, app deployment</td>
+      <td>⭐⭐☆☆☆</td>
+      <td><a href="https://learn.microsoft.com/en-us/certifications/endpoint-administrator/">Official Page</a> | <a href="https://learn.microsoft.com/en-us/training/paths/endpoint-administrator/">Learn Path</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>VMware Workspace ONE Specialist</td>
+      <td>UEM Specialist Exam</td>
+      <td>Workspace ONE Intelligence, UEM APIs, automation workflows</td>
+      <td>⭐⭐⭐☆☆</td>
+      <td><a href="https://www.vmware.com/education-services/certification/vmware-workspace-one-uem-specialist.html">Exam Guide</a> | <a href="https://learningzone.vmware.com/">Learning Zone</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Identity and Access Administrator Associate</td>
+      <td>SC-300</td>
+      <td>Azure Entra ID, Conditional Access, MFA, hybrid identity</td>
+      <td>⭐⭐⭐⭐☆</td>
+      <td><a href="https://learn.microsoft.com/en-us/certifications/identity-access-administrator/">Official Page</a> | <a href="https://learn.microsoft.com/en-us/training/paths/identity-access-administrator/">Learn Path</a></td>
+    </tr>
+  </table>
+
+  <h2 id="badges">🏅 Badge Gallery</h2>
+  <div class="badge-gallery">
+    <img src="ai-900-badge.png" alt="AI-900 Badge">
+    <img src="md-102-badge.png" alt="MD-102 Badge">
+    <!-- Add more badge images here -->
+  </div>
+
+  <footer id="contact">
+    <p>📫 Contact: <a href="mailto:adriano.zoino@example.com">adriano.zoino@example.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/adrianozoino">LinkedIn Profile</a></p>
+  </footer>
+</body>
+</html>
