@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://adrianozoino.github.io/CareerPortfolio/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adriano Zoino</title>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom right, #cce0ff, #e6f0ff);
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1, h2 {
+    color: #003366;
+    animation: fadeIn 1s ease-in;
+  }
+
+  h2 {
+    scroll-margin-top: 60px; /* Prevent sticky nav from covering section headers */
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  p {
+    color: #333;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  /* ✅ Scrollable Nav Bar */
+  .scroll-nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+  }
+
+  .scroll-nav a {
+    display: inline-block;
+    padding: 10px 14px;
+    margin: 0 6px;
+    font-weight: bold;
+    color: #0077cc;
+    text-decoration: none;
+    flex-shrink: 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .scroll-nav a:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: 600px) {
+    .scroll-nav {
+      padding: 8px 0;
+    }
+
+    .scroll-nav a {
+      padding: 10px 12px;
+      font-size: 0.95em;
+    }
+  }
+
+  .profile-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .profile {
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #0077cc;
+    transition: transform 0.3s ease;
+  }
+
+  .profile:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .linkedin-overlay {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 50px;
+  }
+
+  .linkedin-overlay img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #0077cc;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  .education-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+  }
+
+  .education-section img {
+    width: 80px;
+    height: auto;
+  }
+
+  .education-text {
+    text-align: left;
+  }
+
+  .company-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px auto;
+  }
+
+  .company-section img {
+    width: 100px;
+    height: auto;
+  }
+
+  .certification-block {
+    background-color: #f9f9f9;
+    border-left: 4px solid #0078D4;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .certification-block h3 {
+    margin-top: 0;
+    color: #003366;
+  }
+
+  .certification-block img {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .certification-block img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .certification-block img[src="ups.png"] {
+    height: auto;
+    width: auto;
+    max-height: 60px;
+    max-width: 100px;
+    object-fit: contain;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    color: #0077cc;
+  }
+
+  details[open] summary {
+    color: #0078D4;
+  }
+
+  details p, details ul {
+    animation: fadeIn 0.4s ease-in-out;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+    display: block;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #cce0ff;
+    color: #003366;
+  }
+
+  .badge-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 20px 0;
+  }
+
+  .badge-gallery div {
+    width: 120px;
+  }
+
+  .badge-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .badge-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 119, 204, 0.5);
+  }
+
+  .badge-gallery p {
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+
+  .badge-item {
+    text-align: center;
+    flex: 0 0 auto;
+  }
+
+  .badge-item img {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .badge-item p {
+    font-size: 0.85em;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 600px) {
+    .badge-item img {
+      width: 100px;
+    }
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 10px;
+  }
+
+  .skills-grid div {
+    background-color: #f0f8ff;
+    border: 1px solid #cce0ff;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skills-grid div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #e6f0ff;
+  }
+
+  .fade-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.contribution-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 16px 20px;
+  font-size: 1em;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.contribution-card summary {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #003366;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.contribution-card[open] {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.contribution-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #333;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contribution-card ul {
+  margin-top: 10px;
+  padding-left: 1.2em; /* Aligns bullets with paragraph text */
+  list-style-position: inside; /* Keeps bullets aligned with text block */
+  color: #333;
+}
+.contribution-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 16px 20px;
+  font-size: 1em;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.contribution-card[open] {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.contribution-card summary {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #003366;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.contribution-card summary::before {
+  content: attr(data-icon);
+  font-size: 1.6em;
+  margin-right: 12px;
+}
+
+.contribution-card summary:hover {
+  background-color: #e6f2ff;
+  transform: scale(1.02);
+}
+
+.card-summary {
+  font-size: 1.05em;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contribution-card ul {
+  margin-top: 10px;
+  padding-left: 1.2em;
+  list-style-position: inside;
+  color: #333;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1116.0" data-gr-ext-installed="">
+<a id="top"></a>
+<nav class="scroll-nav">
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#top"><span style="font-size:1.2em;">🏠</span> Home</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#education"><span style="font-size:1.2em;">🎓</span> Education</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#experience"><span style="font-size:1.2em;">💼</span> Experience</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#certifications"><span style="font-size:1.2em;">✅</span> Certifications</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#contributions"><span style="font-size:1.2em;">🛠️</span> Contributions</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#plan"><span style="font-size:1.2em;">📅</span> Plan</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#skills"><span style="font-size:1.2em;">🧠</span> Skills</a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/#contact"><span style="font-size:1.2em;">📬</span> Contact</a>
+</nav>
+
+<h1 style="margin-top:30px; font-size:2.4em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  Adriano Zoino's Career Portfolio
+</h1>
+
+  <div class="profile-container">
+  <a href="http://www.linkedin.com/in/adriano-zoino-it" target="_blank">
+    <img src="profile.jpg" alt="Adriano Zoino" class="profile">
+    <div class="linkedin-overlay">
+      <img src="linkedin.jpg" alt="LinkedIn Logo" title="Connect on LinkedIn">
+    </div>
+  </a>
+  <a href="https://adrianozoino.github.io/CareerPortfolio/AdrianoZoinoResume2025v15.pdf" target="_blank">
+    <div class="resume-overlay" style="position: absolute; bottom: -10px; left: -10px; width: 50px;">
+      <img src="resume-icon.png" alt="Resume Icon" title="View My Resume" style="width: 100%; border-radius: 50%; border: 2px solid #0077cc; animation: pulse 2s infinite;">
+    </div>
+  </a>
+</div>
+
+  <h1>Hi! I'm Adriano Zoino</h1>
+  <div class="fade-box">
+  Experienced IT professional specializing in Mobile Device Management and Systems Administration. Manages 150,000+ Apple and Android devices across ground, airline, and healthcare operations. Certified in Apple, Microsoft, AWS, and Azure AI delivering secure, scalable enterprise solutions. Actively seeking opportunities to leverage Azure AI technologies, applying skills gained through Microsoft certifications to real-world enterprise use cases. Continuing education in AI engineering to deepen expertise and drive innovation.
+
+</div>
+
+<h2 id="education" style="margin-top:40px; font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  🎓 Education
+</h2>
+
+
+  <div class="education-section">
+    <img src="kean.png" alt="Kean University Logo">
+    <div class="education-text">
+      <p><strong>Kean University</strong><br>
+      Bachelor of Science in Information Technology</p>
+    </div>
+  </div>
+
+<h2 id="experience" style="margin-top:40px; font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  💼 Experience
+</h2>
+
+
+<div class="certification-block">
+  <h3>Account Service Senior Specialist <span style="font-weight: normal;">— NTT DATA</span></h3>
+  <p style="font-style: italic; color: #555; margin-top: 4px;">
+    Rebadged from UPS — continuing same responsibilities under NTT DATA
+  </p>
+  <img src="ntt.png" alt="NTT DATA Logo" style="width:130px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p><strong>Dates:</strong> August 2025 – Present</p>
+    <ul>
+      <li>Rebadged from UPS to NTT DATA effective August 1, 2025, following the conclusion of UPS employment on July 31, 2025</li>
+      <li>Continued supporting UPS operations in the same capacity, ensuring seamless transition and uninterrupted service delivery</li>
+    </ul>
+  </details>
+</div>
+
+
+<div class="certification-block">
+  <h3>Senior Systems Programming Analyst <span style="font-weight: normal;">— UPS</span></h3>
+  <img src="ups.png" alt="UPS Logo" style="width:60px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p><strong>Dates:</strong> June 2024 – July 2025</p>
+    <ul>
+      <li>
+        Primary device administrator and implementation support for all major UPS airline fleets/operations
+        <ul style="margin-top:6px;">
+          <li>Electronic Flight Kit <span style="color:#666;">(operations pilot fleet)</span></li>
+          <li>Aviation Security <span style="color:#666;">(internal airline audit security fleet)</span></li>
+          <li>Mobile Mechanics <span style="color:#666;">(airline mechanic fleet)</span></li>
+          <li>Flight Forward <span style="color:#666;">(UAV pilot fleet)</span></li>
+          <li>Crew Van Visibility <span style="color:#666;">(airport transportation and taxiing fleet)</span></li>
+        </ul>
+      </li>
+      <li>Administered Android/iOS devices across domestic and international operations (Germany, Türkiye)</li>
+      <li>Configured Microsoft Entra ID workflows for secure authentication and role-based access</li>
+      <li>Implemented access restrictions based on hardware, OS version, and enrollment state</li>
+      <li>Led proactive OS patching and version control across enterprise fleets</li>
+      <li>Coordinated vendor cases and meetings, translating issues into actionable resolutions</li>
+      <li>Managed Workspace ONE UEM and Apple Business Manager environments</li>
+      <li>Provided remote assistance and device control for efficient troubleshooting</li>
+      <li>Created SOPs, presentations, video guides, and Excel documentation for training and operations</li>
+    </ul>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>Systems Programming Analyst <span style="font-weight: normal;">— UPS</span></h3>
+  <img src="ups.png" alt="UPS Logo" style="width:60px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p><strong>Dates:</strong> September 2022 – June 2024</p>
+    <ul>
+      <li>Supported UPS UEM environment via Omnissa Workspace ONE console</li>
+      <li>Primary admin for BASETFS, CAIR, CORA, GTSNGS, DOST, GNS WLAN, Premier, CHCS</li>
+      <li>Backup project implementation support for cross-functional teams</li>
+      <li>Deployed internal and third-party apps to improve operational performance</li>
+      <li>Facilitated communication between Systems Engineering and operations teams</li>
+    </ul>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>Telecommunications Technician <span style="font-weight: normal;">— UPS</span></h3>
+  <img src="ups.png" alt="UPS Logo" style="width:60px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p><strong>Dates:</strong> July 2021 – August 2022</p>
+    <ul>
+      <li>Managed Machine-to-Machine servers: provisioning, vulnerability remediation, decommissioning</li>
+      <li>Troubleshot and escalated telecom infrastructure issues to vendors</li>
+      <li>Audited and prepared cellular billing for payment</li>
+      <li>Provisioned and documented corporate cellular devices</li>
+    </ul>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>Help Desk Analyst <span style="font-weight: normal;">— Kean University</span></h3>
+  <img src="kean.png" alt="Kean University Logo" style="width:60px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p><strong>Dates:</strong> September 2019 – June 2021</p>
+    <ul>
+      <li>Maintained Kean servers across Union-NJ, Ocean-NJ, and Wenzhou-China</li>
+      <li>Administered user and email accounts for students, faculty, and staff</li>
+      <li>Implemented account security countermeasures</li>
+      <li>Configured and deployed IT Helpdesk tools: Freshservice, Freshcaller, BeyondTrust, Pulse Secure</li>
+      <li>Provided hardware/software troubleshooting and professional phone support</li>
+    </ul>
+  </details>
+</div>
+
+<h2 id="certifications" style="margin-top:40px; font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  ✅ Completed Certifications
+</h2>
+
+<div class="certification-block">
+  <h3>Azure AI Fundamentals <span style="font-weight: normal;">— Microsoft</span></h3>
+  <img src="ai.svg" alt="Azure AI Fundamentals Badge" style="width:100px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p>Demonstrates foundational knowledge of artificial intelligence concepts and Microsoft Azure AI services. Covers machine learning, computer vision, natural language processing, and responsible AI principles. Validates the ability to identify AI workloads and deploy ethical, scalable solutions in enterprise environments.</p>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>Apple Certified IT Professional <span style="font-weight: normal;">— Apple</span></h3>
+  <img src="apple.png" alt="Apple Certified IT Professional Badge" style="width:100px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p>Advanced proficiency in Apple Business Manager, device enrollment, supervision, and compliance workflows. This certification also covers how to architect an enterprise environment for Apple devices to operate securely and efficiently within a Mobile Device Management (MDM) system. Valid through <strong>08/02/2027</strong>.</p>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>Microsoft 365 Fundamentals <span style="font-weight: normal;">— Microsoft</span></h3>
+  <img src="micro1.png" alt="Microsoft 365 Fundamentals Badge" style="width:100px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p>Demonstrates foundational knowledge of Microsoft 365 services including Teams, Exchange, SharePoint, and OneDrive. Covers cloud concepts, productivity tools, licensing models, and core identity services such as Azure Active Directory for user authentication and access management across enterprise environments.</p>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>AWS Certified Cloud Practitioner <span style="font-weight: normal;">— AWS</span></h3>
+  <img src="aws.png" alt="AWS Cloud Practitioner Badge" style="width:100px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p>Provides a comprehensive understanding of core AWS services, global infrastructure, cloud architecture principles, pricing models, and shared responsibility frameworks. Covers key topics such as compute, storage, networking, identity and access management, and cloud security best practices. While this certification <strong>expired on 01/11/2024</strong>, it remains highly relevant to job functions such as evaluating cloud migration strategies for UPS MDM environments and supporting foundational cloud decision-making across enterprise operations.</p>
+  </details>
+</div>
+
+<div class="certification-block">
+  <h3>CompTIA A+ <span style="font-weight: normal;">— CompTIA</span></h3>
+  <img src="comptia.png" alt="CompTIA A+ Badge" style="width:100px; margin-top:10px;">
+  <details>
+    <summary>Learn More</summary>
+    <p>Certifies foundational IT skills in hardware, networking, troubleshooting, and OS support. <strong>Expired on 07/27/2022</strong> but remains relevant to demonstrated experience and support capabilities.</p>
+  </details>
+</div>
+
+<section id="contributions" style="scroll-margin-top:80px;">
+  <h2 style="font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+    🛠️ Technical Contributions &amp; Implementations
+  </h2>
+<p style="text-align:center; font-size:1em; color:#003366; margin-top:10px; padding:12px 24px; background:rgba(255,255,255,0.6); backdrop-filter:blur(6px); border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); opacity:0; animation: fadeInUp 1.2s ease-out forwards;">
+  📂 <strong>Click a section</strong> to reveal more about each technical contribution.
+</p>
+
+  <div style="display:grid; gap:20px; max-width:900px; margin:30px auto;">
+
+    <!-- Card 1 -->
+    <details class="contribution-card">
+      <summary data-icon="📱">Mobile Mechanic Maintenix Issue Resolution</summary>
+      <p class="card-summary">
+        <strong>
+          Orchestrated a multi-vendor diagnostic initiative to resolve a critical disruption in UPS Mobile Mechanic workflows. Served as the escalation lead across Apple, Zscaler, and internal teams, driving resolution through structured analysis and coordinated response.
+        </strong>
+      </p>
+      <ul>
+        <li>Directed end-to-end troubleshooting as primary case manager with Apple and Zscaler</li>
+        <li>Facilitated OCC bridge calls to align UPS operations with vendor engineering teams</li>
+        <li>Provided on-call support and real-time issue triage for Mobile Mechanic stakeholders</li>
+        <li>Captured and relayed diagnostic telemetry to accelerate vendor-side analysis</li>
+        <li>Proposed contingency workflows to mitigate operational impact during investigation</li>
+        <li>Executed expedited OS deployment strategy to restore full functionality</li>
+      </ul>
+    </details>
+
+    <!-- Card 2 -->
+    <details class="contribution-card">
+      <summary data-icon="📲">iOS Notifications System &amp; Update Delivery</summary>
+      <p class="card-summary">
+        <strong>
+          Designed and implemented a unified iOS update delivery framework using Workspace ONE UEM, streamlining deployment and enhancing visibility across UPS enterprise endpoints.
+        </strong>
+      </p>
+      <ul>
+        <li>Engineered a consolidated update process to ensure consistent delivery across device fleets</li>
+        <li>Authored deployment documentation for Systems Engineering and support teams</li>
+        <li>Automated install tracking and visualized adoption metrics through custom reporting</li>
+        <li>Collaborated with VMware, Apple, and Broadcom to validate deployment behavior</li>
+        <li>Documented testing outcomes and platform-specific nuances for future reference</li>
+      </ul>
+    </details>
+
+    <!-- Card 3 -->
+    <details class="contribution-card">
+      <summary data-icon="🔔">Hub Notification Policy</summary>
+      <p class="card-summary">
+        <strong>
+          Developed and enforced a notification policy to drive user compliance and awareness for endpoint updates, leveraging Workspace ONE Hub capabilities.
+        </strong>
+      </p>
+      <ul>
+        <li>Created dynamic pop-up reminders to prompt timely user action on updates</li>
+        <li>Implemented environment-wide policy to standardize Hub notification behavior</li>
+      </ul>
+    </details>
+
+    <!-- Card 4 -->
+    <details class="contribution-card">
+      <summary data-icon="📊">Intelligence Access &amp; Reporting</summary>
+      <p class="card-summary">
+        <strong>
+          Enabled strategic access to Workspace ONE Intelligence and built reusable reporting templates to support compliance, asset tracking, and operational insights.
+        </strong>
+      </p>
+      <ul>
+        <li>Provisioned account-based access for Systems Engineering and project leads</li>
+        <li>Designed modular report templates for recurring use across business units</li>
+        <li>Delivered actionable reports on unauthorized apps, GPS data, Android builds, device lifecycle, and iOS compliance</li>
+      </ul>
+    </details>
+
+    <!-- Card 5 -->
+    <details class="contribution-card">
+      <summary data-icon="🛡️">InfoSec Compliance: Last Seen 30 Days</summary>
+      <p class="card-summary">
+        <strong>
+          Spearheaded a compliance initiative to enforce endpoint visibility standards, aligning with InfoSec requirements and operational continuity goals.
+        </strong>
+      </p>
+      <ul>
+        <li>Led cross-functional communications to ensure enterprise-wide policy adoption</li>
+        <li>Applied 30-day last-seen compliance policy to over 150,000 managed endpoints</li>
+        <li>Delegated reporting responsibilities to designated project representatives</li>
+      </ul>
+    </details>
+
+    <!-- Card 6 -->
+    <details class="contribution-card">
+      <summary data-icon="✈️">UPS Airlines Paperless Initiative</summary>
+      <p class="card-summary">
+        <strong>
+          Supported UPS Airlines’ digital transformation by deploying mobile applications that replaced paper-based workflows for flight crews.
+        </strong>
+      </p>
+      <ul>
+        <li>Delivered Workspace ONE UEM apps enabling secure, paperless cockpit operations</li>
+      </ul>
+    </details>
+
+    <!-- Card 7 -->
+    <details class="contribution-card">
+      <summary data-icon="🧾">Workspace ONE UEM Maintenance Notification System</summary>
+      <p class="card-summary">
+        <strong>
+          Created a scalable notification system to inform stakeholders of console maintenance events, improving transparency and operational readiness.
+        </strong>
+      </p>
+      <ul>
+        <li>Designed editable graphics and authored documentation for scheduled maintenance alerts</li>
+      </ul>
+    </details>
+
+  </div>
+</section>
+
+<h2 id="plan" style="margin-top:40px; font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  📅 Certification Plan
+</h2>
+
+<table>
+  <tbody><tr>
+    <th>Certification</th>
+    <th>Description</th>
+    <th>Badge</th>
+  </tr>
+
+<tr>
+  <td>Azure AI Engineer Associate (AI-102)</td>
+  <td>Design and implement Azure AI solutions including cognitive services, natural language processing, computer vision, and bot frameworks. Emphasizes responsible AI and enterprise-grade deployment strategies.</td>
+  <td style="text-align:center;"><img src="ai102.png" alt="AI-102 Logo" style="height:130px;"></td>
+</tr>
+    <tr>
+    <td>Microsoft Endpoint Administrator Associate (MD-102)</td>
+    <td>Gain expertise in Microsoft Intune, Azure Entra ID, compliance policies, and app deployment across enterprise devices.</td>
+    <td style="text-align:center;"><img src="md102.png" alt="MD-102 Logo" style="height:130px;"></td>
+  </tr>
+  <tr>
+    <td>Omnissa Professional Workspace ONE</td>
+    <td>Master Workspace ONE Intelligence, UEM APIs, and automation workflows for scalable endpoint management.</td>
+    <td style="text-align:center;"><img src="omnissa.png" alt="Omnissa Logo" style="height:150px;"></td>
+  </tr>
+  <tr>
+    <td>Identity and Access Administrator Associate (SC-300)</td>
+    <td>Learn to manage Azure Entra ID, Conditional Access, MFA, and hybrid identity solutions for secure enterprise environments.</td>
+    <td style="text-align:center;"><img src="sc300.png" alt="SC-300 Logo" style="height:130px;"></td>
+  </tr>
+</tbody></table>
+
+
+<h2 id="skills" style="margin-top:40px; font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  🧠 Technical Skills &amp; Platforms
+</h2>
+
+<div class="skills-grid">
+  <div>Omnissa Workspace ONE UEM</div>
+  <div>Workspace ONE Intelligence</div>
+  <div>Mobile Device Management</div>
+  <div>Unified Endpoint Management</div>
+  <div>Device Lifecycle Management</div>
+  <div>Apple Business Manager</div>
+  <div>ServiceNow</div>
+  <div>AppleCare Enterprise</div>
+  <div>Zebra StageNow</div>
+  <div>Absolute NetMotion</div>
+  <div>Amazon Web Services</div>
+  <div>Microsoft 365</div>
+  <div>Microsoft Office</div>
+</div>
+
+
+<h2 id="contact" style="margin-top:40px; font-size:1.8em; color:#003366; border-bottom:3px solid #0077cc; padding-bottom:10px;">
+  📬 Contact
+</h2>
+
+<div style="background-color:#f9f9f9; border-left:4px solid #0078D4; padding:20px; border-radius:6px; max-width:600px; margin:20px auto; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:left; animation: fadeIn 0.8s ease-in;">
+  <p style="margin-bottom:12px;">
+    <span style="font-weight:bold;">✉️ Email:</span> 
+    <a href="mailto:adriano.zoino1@outlook.com" style="color:#0077cc; text-decoration:underline;">
+      adriano.zoino1@outlook.com
+    </a>
+  </p>
+  <p style="margin-bottom:12px;">
+    <span style="font-weight:bold;">📞 Phone:</span> 
+    <a href="tel:+12016604502" style="color:#0077cc; text-decoration:underline;">
+      201-660-4502
+    </a>
+  </p>
+  <p style="margin-bottom:12px;">
+    <span style="font-weight:bold;">📍 Location:</span> Ringwood, NJ
+  </p>
+  <p style="margin-top:20px;">
+    <a href="https://www.linkedin.com/in/adriano-zoino-it" target="_blank" style="display:inline-block; background-color:#0077cc; color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:bold; transition:background-color 0.3s ease;">
+      🔗 Connect on LinkedIn
+    </a>
+  </p>
+</div>
+
+<p>© 2025 Adriano Zoino. All rights reserved.</p>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
